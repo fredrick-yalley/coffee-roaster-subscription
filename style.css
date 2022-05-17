@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 72px;
+    font-family: fraunces;
+    color: black;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: fraunces;
+    color: black;
+}
+h3 {
+    font-size: 32px;
+    line-height: 36px;
+    font-family: fraunces;
+    color: black;
+}
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: fraunces;
+    color: black;
+}
+
+body {
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   width: 83vw;
+   font-size: 16px;
+   line-height: 26px;
+   font-family: barlow;
+}
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav {
+    font-size: 15px;
+    line-height: 15px;
+    font-family: barlow;
+    font-weight: bold;
+    letter-spacing: 1.0;
+}
+#header a {
+    text-decoration: none;
+    color: #83888F;
+    padding: 1.1rem;
+}
+.hero {
+    background-image: url("./assets/home/desktop/image-hero-coffeepress.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1.5rem;
+}
+
+.your-plan {
+    width: 32%;
+    margin: 10rem 6rem;
+}
+
+.your-plan h1 {
+    margin-bottom: 2rem;
+    color: white;
+}
+.your-plan p {
+    color: #83888F;
+    margin-bottom: 2rem;
+}  
+.create-button {
+    padding: 0.6rem 1.9rem;
+    background-color: #0E8784;
+    color: hsl(0,0%,100%);
+    font-family: fraunces;
+    border-radius: 5px;
+}
+
+.collection {
+    display: flex;
+    align-items: center;
+    margin-top: 9rem;
+    position: relative;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 8rem auto;
+    width: 78%;
+    z-index: 10;
+}
+
+.collection img {
+    width: 9em;
+    height: 9em;
+}
+.collection h4 {
+    text-align: center;
+    margin: 1.2rem 0;
+}
+.collection p {
+    text-align: center;
+    color: #83888F;
+}
+
+.overlay{
+    /* background: rgb(250,249,254); */
+background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 100%);
+    position: absolute;
+    bottom: 70%;
+    left: 14%;
+    z-index: 5;
+    margin: 0 auto;
+}
+
+.overlay h1{
+    text-transform: lowercase;
+    font-size: 150px;
+    line-height: 72px;
+    color: #83888F;
+}
+
+.our-offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333D4B;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+.why-us {
+    text-align: center;
+    width: 53%;
+    margin: 4.5rem auto;
+}
+.why-us h3 {
+    color: white;
+}
+
+.why-us p {
+    color: #83888F;
+    margin: 1rem 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    /* gap: 1.5rem; */
+    width: 95%;
+    text-align: center;
+}
+
+.container h4 {
+    color: #fff;
+}
+
+.container p {
+    color: #fff;
+}
+
+.offers {
+    background-color: #0E8784;
+    width: 80%;
+    height: 300px;
+    padding: 3rem 1.4rem;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.how-it-works {
+    width: 89%;
+    margin: 4rem auto;
+
+}
+
+.how-it-works h2 {
+    color: #83888F;
+    margin-top: 2rem;
+}
+.num-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1.8rem 0;
+}
+.how-to {
+    width: 60%;
+}
+.how-to h1 {
+    margin-bottom: 1rem;
+    color: #FDD6BA;
+}
+
+.how-to h3 {
+    margin-bottom: 1rem;
+}
+
+#down-button {
+    margin-top: 1.5rem;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 4rem;
+    background-color: #333D4B;
+    padding: 2rem;
+}
+
+#footer nav {
+    margin-right: 17rem;
+    margin-top: 0.6rem;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #83888F;
+    padding: 1.1rem;
+}
+
+.media svg{
+    margin-left: 1rem;
+}
