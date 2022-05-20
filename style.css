@@ -66,7 +66,16 @@ a {
     color: #83888F;
     padding: 1.1rem;
 }
-
+nav ul {
+    display: inline-flex;
+    
+}
+nav li {
+    list-style-type: none;
+}
+nav .fa {
+    display: none;
+}
 .top-nav a:hover {
     cursor: pointer;
     color: #333D4B;
@@ -213,7 +222,7 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
 }
 
 .how-it-works {
-    width: 89%;
+    width: 90%;
     margin: 4rem auto;
 }
 
@@ -236,7 +245,7 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
 
 .how-it-works h2 {
     color: #83888F;
-    margin-top: 2rem;
+    padding-block: 2rem;
 }
 .num-container {
     display: grid;
@@ -456,9 +465,33 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
 .order {
     display: flex;
     justify-content: center;
-
 }
 
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select {
+    /* padding: 0 1.5rem 2rem; */
+    padding-inline: 2rem;
+    background-color: #F4F1EB;
+    margin: 3rem 1rem;
+    width: 340px;
+    height: 260px;
+    border-radius: 7px;
+}
+.select h5 {
+    font-family: fraunces;
+    font-size: 17px;
+    padding-block: 1.5rem;
+}
+
+.select p {
+    padding-bottom: 1.7rem;
+    font-size: 15px;
+}
 .head {
     margin-right: 10rem;
     font-family: fraunces;
@@ -472,11 +505,16 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
 }
 
 .details {
-    width: 37%;
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .details h3  {
     color: #83888F;
+    margin-left: 1rem;
+    width: 100%;
 }
 
 .summary {
@@ -492,8 +530,6 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
 .summary h5 {
     color: #83888F;
     text-transform: uppercase;
-   
-
 }
 
 .summary q {
@@ -509,7 +545,7 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
 .button {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 10em;
+    margin-bottom: 8em;
 }
 #subscribe-button {
     background-color: #E2DEDB;
@@ -523,10 +559,15 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
         background-size: cover;
         background-repeat: no-repeat;
     }
+    #header {
+        width: 100%;
+    }
+
     body {
         font-size: 18px;
          line-height: 28px;
     }
+
     .your-plan {
         width: 70%;
         margin: 3.5rem 4rem;
@@ -694,9 +735,246 @@ background: linear-gradient(0deg, rgba(250,249,254,1) 0%, rgba(242,246,247,0) 10
     .steps p {
         font-size: 22px;
     }
+    .order {
+        width: 100%;
+        justify-content: center;
+    }
+    .head {
+        display: none;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .details h3 {
+        font-size: 40px;
+        
+    }
+    .options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .select h5 {
+        font-size: 25px;
+    }
+    .select p {
+        font-size: 15px;
+    }
+    .button {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    #subscribe-button {
+        padding-inline: 3rem;
+        padding-block: 1.1rem;
+        background-color: #0E8784;
+        font-size: 22px;
+    }
 
 }
 
 @media (max-width: 500px) {
-    
+    nav ul {
+        display: none;
+    }
+    nav .fa {
+        display: block;
+        font-size: 20px;
+    } 
+    #header {
+        width: 100%;
+    }
+
+    .hero {
+        background-image: url("./assets/home/mobile/image-hero-coffeepress.jpg");
+       text-align: center;
+    }
+    .your-plan {
+        width: 70%;
+        margin: 4rem auto;
+    }
+    .your-plan h1 {
+        font-size: 39px;
+        line-height: 1;
+    }
+    .your-plan p {
+        font-size: 15px;
+    }
+    .overlay h1 {
+        font-size: 60px;
+        margin-bottom: 2em;
+    }
+    .overlay {
+        margin-top: -4rem;
+    }
+    .coffee-type {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .collection img {
+        margin-bottom: -2rem;
+    }
+    .offers {
+        flex-direction: column;
+        text-align: center;
+        padding-block: 5rem;
+        
+    }
+    .container {
+        margin-top: -26em;
+    }
+    .offers h4 {
+        font-size: 26px;
+    }
+    .offers p {
+        font-size: 15px;
+    }
+    .how-it-works {
+        margin-top: 18em;
+        width: 100%;
+        text-align: center;
+    }
+    .home-line {
+        display: none;
+    }
+    .num-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr); 
+    }
+
+    .how-to {
+        margin-top: 3rem;
+    }
+    .how-to h1 {
+        font-size: 120px;
+        margin-block: 1.8rem;
+    }
+    .how-to p {
+        font-size: 22px;
+    }
+    .create-button {
+        padding-block: 1.4rem;
+        padding-inline: 3rem;
+        font-size: 25px;
+    }
+    #footer {
+        padding-block: 4rem;
+    }
+
+    .down-nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .down-nav a {
+        font-size: 20px;
+    }
+    .section-1 {
+        background-image: url("./assets/about/mobile/image-hero-whitecup.jpg");
+    }
+    .section-2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .photo-1 {
+        background-image: url("./assets/about/mobile/image-commitment.jpg");
+        width: 100%;
+    }
+    .commitment-message {
+        width: 100%;
+        text-align: center;
+    }
+    .commitment-message h2 {
+        font-size: 40px;
+        margin-top: 2rem;
+        margin-block: 2rem;
+    }
+    .commitment-message p {
+        font-size: 20px;
+        color: #83888F;
+    }
+
+    .section-3 {
+        background-image: url("./assets/about/mobile/bg-quality.png");
+        width: 100%;
+    }
+    .photo-2 {
+        background-image: url("./assets/about/mobile/image-quality.jpg");
+        height: 220px;
+        width: 90%;
+        left: 5%;
+        margin-top: 2.5rem;
+    }
+    .quality-info {
+        margin-top: 10em;
+    }
+    .quality-info p {
+        font-size: 20px;
+    }
+    .section-4 {
+        width: 100%;
+        text-align: center;
+    }
+    .section-4 h4 {
+        font-size: 33px;
+    }
+    .countries {
+        flex-direction: column;
+    }
+    .countries h3 {
+        font-size: 30px;
+        margin-block: 1.5rem;
+    }
+    .countries p {
+        font-size: 20px;
+    }
+    .part-1 {
+        background-image: url(./assets/plan/mobile/image-hero-blackcup.jpg);
+    }
+    .create-plan {
+        margin: 3rem auto;
+        width: 90%;
+        text-align: center;
+    }
+    .create-plan h1 {
+        font-size: 52px;
+    }
+    .plan-line {
+        display: none;
+    }
+    .steps {
+        width: 100%;
+        text-align: center;
+        background-image: url("./assets/plan/mobile/bg-steps.png");
+    }
+    .steps h1 {
+        font-size: 140px;
+    }
+    .steps h3 {
+        font-size: 28px;
+    }
+    .steps p {
+        font-size: 22px;
+    }
+    .details h3 {
+        margin-block: 3rem;
+        font-size: 35px;
+    }
+    .select {
+        margin: 0.5rem;
+        height: 180px;
+    }
+    .options {
+        width: 100%;
+        flex-direction: column;
+    }
 }
