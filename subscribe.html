@@ -60,18 +60,18 @@
     </div>
     <div class="order">
         <div class="head">
-            <p><span>01</span> Preferences</p><hr>
-            <p><span>02</span> Beans Type</p><hr>
-            <p><span>03</span> Quantity</p><hr>
-            <p><span>04</span> Grind Options</p><hr>
-            <p><span>05</span> Deliveries</p><hr>
+            <p id="p-arrow-1"><span id="a1-span">01</span> Preferences</p><hr>
+            <p id="p-arrow-2"><span id="a2-span">02</span> Beans Type</p><hr>
+            <p id="p-arrow-3"><span id="a3-span">03</span> Quantity</p><hr>
+            <p id="p-arrow-4"><span id="a4-span">04</span> Grind Options</p><hr>
+            <p id="p-arrow-5"><span id="a5-span">05</span> Deliveries</p><hr>
         </div>
         <div class="details">
-            <div class="preference">
+            <div class="preference questions">
                 <h3>How do you drink your coffee?
-                    <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-1" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
-                <div class="pref-option options">
+                <div id="pref-option" class="options option-def">
                     <div class="select">
                         <h5>Capsule</h5>
                         <p>Compatible with Nespresso systems and similar brewers</p>
@@ -86,11 +86,11 @@
                     </div>
                 </div>
             </div>
-            <div class="Beans-type">
+            <div class="Beans-type questions">
                 <h3>What type of coffee?
-                    <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-2" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
-                <div class="type-option options">
+                <div id="type-option" class="options view-state">
                     <div class="select">
                         <h5>Single Origin</h5>
                         <p>Distinct, high quality coffee from a specific family-owned farm</p>
@@ -105,11 +105,11 @@
                     </div>
                 </div>
             </div>
-            <div class="quantity">
+            <div class="quantity questions">
                 <h3>How much would you like?
-                    <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-3" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
-                <div class="quantity-option options">
+                <div id="quantity-option" class="options view-state">
                     <div class="select">
                         <h5>250g</h5>
                         <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
@@ -124,11 +124,11 @@
                     </div>
                 </div>
             </div>
-            <div class="grind">
+            <div class="grind questions">
                 <h3>Want us to grind them?
-                    <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-4" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
-                <div class="grind-option options">
+                <div id="grind-option" class="options view-state">
                     <div class="select">
                         <h5>Wholebean</h5>
                         <p>Best choice if you cherish the full sensory experience</p>
@@ -143,11 +143,11 @@
                     </div>
                 </div>
             </div>
-            <div class="delivery">
+            <div class="delivery questions">
                 <h3>How often should we deliver?
-                    <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-5" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
-                <div class="delivery-option options">
+                <div id="delivery-option" class="options view-state">
                     <div class="select">
                         <h5>Every week</h5>
                         <p>$7.20 per shipment.Includes free first-class shipping.</p>
@@ -167,7 +167,9 @@
                 <q>I drink my coffee using <span>Capsules</span>, with a <span>____</span>  type of bean. <span>____</span>, sent to me <span>____</span>.</q>
             </div>
             <div class="button">
-                <input id="subscribe-button" class="create-button" type="submit" value="Create your plan!">
+                <a href="./summary.html">
+                    <input id="subscribe-button" class="create-button" type="submit" value="Create your plan!">
+                </a>
             </div>
         </div>
     </div>
