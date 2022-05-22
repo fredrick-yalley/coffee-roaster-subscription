@@ -28,6 +28,8 @@ const quantity = document.querySelector("#quantity-option");
 const grind = document.querySelector("#grind-option");
 const delivery = document.querySelector("#delivery-option");
 const boxes = document.querySelectorAll('.select');
+const capsule = document.querySelector("#capsule");
+const grindHeading = document.querySelector("#grind-heading");
 
 menu.addEventListener("click", () => {
     if(menu.classList.contains("fa-bars")) {
@@ -147,6 +149,7 @@ arrowthree.addEventListener("click", () => {
 
     }
 })
+
 arrowfour.addEventListener("click", () => {
     if(grind.classList.contains("view-state")) {
         grind.classList.remove("view-state");
@@ -171,5 +174,10 @@ boxes.forEach(box => {
     box.addEventListener('click', () => {
         box.style.backgroundColor = '#0E8784';
     })
-    
+    if(box === capsule.classList.contains("cap")) {
+        arrowfour.addEventListener("click", () => {
+        grind.classList.add("view-state");
+        grindHeading.style.color = "#83888F";
+        })
+    }
 });
