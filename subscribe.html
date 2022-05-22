@@ -72,15 +72,15 @@
                     <img id="arrow-1" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="pref-option" class="options option-def">
-                    <div class="select">
+                    <div id="capsule" class="select cap">
                         <h5>Capsule</h5>
                         <p>Compatible with Nespresso systems and similar brewers</p>
                     </div>
-                    <div class="select">
+                    <div id="filter" class="select">
                         <h5>Filter</h5>
                         <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
                     </div>
-                    <div class="select">
+                    <div id="espresso" class="select">
                         <h5>Espresso</h5>
                         <p>Dense and finely ground beans for an intense, flavourful experience</p>
                     </div>
@@ -91,15 +91,15 @@
                     <img id="arrow-2" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="type-option" class="options view-state">
-                    <div class="select">
+                    <div id="origin" class="select">
                         <h5>Single Origin</h5>
                         <p>Distinct, high quality coffee from a specific family-owned farm</p>
                     </div>
-                    <div class="select">
+                    <div id="decaf" class="select">
                         <h5>Decaf</h5>
                         <p>Just like regular coffee, except the caffeine has been removed</p>
                     </div>
-                    <div class="select">
+                    <div id="blended" class="select">
                         <h5>Blended</h5>
                         <p>Combination of two or three dark roasted beans of organic coffees</p>
                     </div>
@@ -110,34 +110,34 @@
                     <img id="arrow-3" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="quantity-option" class="options view-state">
-                    <div class="select">
+                    <div id="small" class="select">
                         <h5>250g</h5>
                         <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
                     </div>
-                    <div class="select">
+                    <div id="medium" class="select">
                         <h5>500g</h5>
                         <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
                     </div>
-                    <div class="select">
+                    <div id="large" class="select">
                         <h5>1000g</h5>
                         <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
                     </div>
                 </div>
             </div>
             <div class="grind questions">
-                <h3>Want us to grind them?
+                <h3 id="grind-heading">Want us to grind them?
                     <img id="arrow-4" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="grind-option" class="options view-state">
-                    <div class="select">
+                    <div id="wholebean" class="select">
                         <h5>Wholebean</h5>
                         <p>Best choice if you cherish the full sensory experience</p>
                     </div>
-                    <div class="select">
+                    <div id="filt" class="select">
                         <h5>Filter</h5>
                         <p>For drip or pour-over coffee methods such as v60 or Aeropress</p>
                     </div>
-                    <div class="select">
+                    <div id="cafetiere" class="select">
                         <h5>Cafetiere</h5>
                         <p>Course ground beans specially suited for french press coffee</p>
                     </div>
@@ -148,29 +148,39 @@
                     <img id="arrow-5" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="delivery-option" class="options view-state">
-                    <div class="select">
+                    <div id="one-week" class="select">
                         <h5>Every week</h5>
-                        <p>$7.20 per shipment.Includes free first-class shipping.</p>
+                        <p><span>$7.20</span> per shipment.Includes free first-class shipping.</p>
                     </div>
-                    <div class="select">
+                    <div id="two-weeks" class="select">
                         <h5>Every 2 weeks</h5>
-                        <p>$9.60 per shipment.Includes free priority shipping.</p>
+                        <p><span>$9.60</span> per shipment.Includes free priority shipping.</p>
                     </div>
-                    <div class="select">
+                    <div id="month" class="select">
                         <h5>Every month</h5>
-                        <p>$12.00 per shipment.Includes free priority shipping</p>
+                        <p><span>$12.00</span> per shipment.Includes free priority shipping</p>
                     </div>
                 </div>
             </div>
             <div class="summary">
                 <h5>order summary</h5>
-                <q>I drink my coffee using <span>Capsules</span>, with a <span>____</span>  type of bean. <span>____</span>, sent to me <span>____</span>.</q>
+                <q>I drink my coffee using <span>____</span>, with a <span>____</span>  type of bean. <span>____</span>, sent to me <span>____</span>.</q>
             </div>
             <div class="button">
-                <a href="./summary.html">
-                    <input id="subscribe-button" class="create-button" type="submit" value="Create your plan!">
-                </a>
+                    <button id="subscribe-button" class="create-button" type="submit">Create your plan!</button> 
             </div>
+            
+        </div>
+    </div>
+    <div class="summ-page">
+        <h1>Order summary</h1>
+        <div class="sum-words">
+            <q>I drink my coffee <span>as</span> <span>____</span>, with a <span>____</span>  type of bean. <span>____</span>, sent to me <span>____</span>.</q>
+            <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
+        </div>
+        <div class="check">
+            <p><span>$</span>/ <span>mo</span></p>
+            <button type="submit" id="checkout" class="checkout-btn">checkout</button>
         </div>
     </div>
 
@@ -205,6 +215,6 @@
         </div>
     </footer>
 
-    <script src="./app.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
