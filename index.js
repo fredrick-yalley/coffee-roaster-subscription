@@ -1,35 +1,53 @@
 const menu = document.querySelector(".fa");
 const nav = document.querySelector("ul");
-const paragraphOne = document.querySelector("#p-arrow-1");
-const paragraphTwo = document.querySelector("#p-arrow-2");
-const paragraphThree = document.querySelector("#p-arrow-3");
-const paragraphFour = document.querySelector("#p-arrow-4");
-const paragraphFive = document.querySelector("#p-arrow-5");
-// span
-const aOneSpan = document.querySelector("#a1-span");
-const aTwoSpan = document.querySelector("#a2-span");
-const aThreeSpan = document.querySelector("#a3-span");
-const aFourSpan = document.querySelector("#a4-span");
-const aFiveSpan = document.querySelector("#a5-span");
+const toggler = document.getElementsByClassName("toggler"),
+  orderCards = document.getElementsByClassName("order-cards"),
+  preferences = document.getElementsByClassName("preferences"),
+  beanTypes = document.getElementsByClassName("bean-types"),
+  quantity = document.getElementsByClassName("quantity"),
+  grindOption = document.getElementsByClassName("grind-option"),
+  deliveries = document.getElementsByClassName("deliveries");
 
-// arrow
-const arrowOne = document.querySelector("#arrow-1");
-const arrowtwo = document.querySelector("#arrow-2");
-const arrowthree = document.querySelector("#arrow-3");
-const arrowfour = document.querySelector("#arrow-4");
-const arrowfive = document.querySelector("#arrow-5");
+const capsule = document.getElementById("capsule"),
+  grindOptions = document.getElementById("grind-options"),
+  grindToggler = document.getElementById("grind-toggler");
+
+const usingOrAs = document.getElementById("using-or-as"),
+  preferencesText = document.getElementById("preferences-text"),
+  typeText = document.getElementById("type-text"),
+  quantityText = document.getElementById("quantity-text"),
+  grindOptionsText = document.getElementById("grind-options-text"),
+  deliveriesText = document.getElementById("deliveries-text");
+
+  const filterOrEspresso = document.getElementById("filter-or-espresso");
+  const grindHeading = document.getElementById("grind-heading");
 
 
-const options = document.querySelector(".options");
-// options
-const preference = document.querySelector("#pref-option");
-const type = document.querySelector("#type-option");
-const quantity = document.querySelector("#quantity-option");
-const grind = document.querySelector("#grind-option");
-const delivery = document.querySelector("#delivery-option");
-const boxes = document.querySelectorAll('.select');
-const capsule = document.querySelector("#capsule");
-const grindHeading = document.querySelector("#grind-heading");
+let preferencesClicked = false;
+let beanTypesClicked = false;
+let orderquantitiesClicked = false;
+let deliveriesClicked = false;
+
+let pricePerMouthNumber = 0;
+
+
+const listOne = document.querySelector("#p-arrow-1");
+    const listTwo = document.querySelector("#p-arrow-2");
+    const listThree = document.querySelector("#p-arrow-3");
+    const listFour = document.querySelector("#p-arrow-4");
+    const listFive = document.querySelector("#p-arrow-5");
+
+    const arrowOne = document.querySelector("#arrow-1");
+    const arrowtwo = document.querySelector("#arrow-2");
+    const arrowfour = document.querySelector(".arrow-4");
+    const arrowthree = document.querySelector("#arrow-3");
+    const arrowfive = document.querySelector("#arrow-5");
+
+   const preference = document.querySelector("#pref-option");
+    const type = document.querySelector("#type-option");
+    const quant = document.querySelector("#quantity-option");
+    const grind = document.querySelector("#grind-option");
+    const delivery = document.querySelector("#delivery-option");
 
 menu.addEventListener("click", () => {
     if(menu.classList.contains("fa-bars")) {
@@ -43,141 +61,265 @@ menu.addEventListener("click", () => {
     }
 })
 
-paragraphOne.addEventListener("click", () => {
-    if(!preference.classList.contains("view-state")) {
-        preference.classList.add("view-state");
-        arrowOne.style.transform = "rotate(360deg)";
-        paragraphOne.style.color = "#333D4B";
-        paragraphOne.style.fontWeight = "bolder";
-        aOneSpan.style.color = "#0E8784";
-    } else {
-        preference.classList.remove("view-state");
-        arrowOne.style.transform = "rotate(180deg)";
-        paragraphOne.style.color = "#83888F";
-        aOneSpan.style.color = "#83888F";
-        paragraphOne.style.fontWeight = "normal";
-    }
-})
 
-paragraphTwo.addEventListener("click", () => {
-    if(type.classList.contains("view-state")) {
-        type.classList.remove("view-state");
-        arrowtwo.style.transform = "rotate(180deg)";
-        paragraphTwo.style.color = "#333D4B";
-        paragraphTwo.style.fontWeight = "bolder";
-        aTwoSpan.style.color = "#0E8784";
-    } else {
-        type.classList.add("view-state");
-        arrowtwo.style.transform = "rotate(360deg)";
-        paragraphTwo.style.color = "#83888F";
-        aTwoSpan.style.color = "#83888F";
-        paragraphTwo.style.fontWeight = "normal";
-    }
-})
-paragraphThree.addEventListener("click", () => {
-    if(quantity.classList.contains("view-state")) {
-        quantity.classList.remove("view-state");
-        arrowthree.style.transform = "rotate(180deg)";
-        paragraphThree.style.color = "#333D4B";
-        paragraphThree.style.fontWeight = "bolder";
-        aThreeSpan.style.color = "#0E8784";
-    } else {
-        quantity.classList.add("view-state");
-        arrowthree.style.transform = "rotate(360deg)";
-        paragraphThree.style.color = "#83888F";
-        aThreeSpan.style.color = "#83888F";
-        paragraphThree.style.fontWeight = "normal";
-    }
-})
-paragraphFour.addEventListener("click", () => {
-    if(grind.classList.contains("view-state")) {
-        grind.classList.remove("view-state");
-        arrowfour.style.transform = "rotate(180deg)";
-        paragraphFour.style.color = "#333D4B";
-        paragraphFour.style.fontWeight = "bolder";
-        aFourSpan.style.color = "#0E8784";
-    } else {
-        grind.classList.add("view-state");
-        arrowfour.style.transform = "rotate(360deg)";
-        paragraphFour.style.color = "#83888F";
-        aFourSpan.style.color = "#83888F";
-        paragraphFour.style.fontWeight = "normal";
-    }
-})
-paragraphFive.addEventListener("click", () => {
-    if(delivery.classList.contains("view-state")) {
-        delivery.classList.remove("view-state");
-        arrowfive.style.transform = "rotate(180deg)";
-        paragraphFive.style.color = "#333D4B";
-        paragraphFive.style.fontWeight = "bolder";
-        aFiveSpan.style.color = "#0E8784";
-    } else {
-        delivery.classList.add("view-state");
-        arrowfive.style.transform = "rotate(360deg)";
-        paragraphFive.style.color = "#83888F";
-        aFiveSpan.style.color = "#83888F";
-        paragraphFive.style.fontWeight = "normal";
-    }
-})
+listOne.addEventListener("click", () => {
+     if(!preference.classList.contains("view-state")) {
+         preference.classList.add("view-state");
+         arrowOne.style.transform = "rotate(360deg)";
+         listOne.style.color = "#83888F";
+         listOne.style.fontWeight = "bolder";
+         aOneSpan.style.color = "#83888F";
+     } else {
+         preference.classList.remove("view-state");
+         arrowOne.style.transform = "rotate(180deg)";
+         listOne.style.color = "#333D4B";
+         aOneSpan.style.color = "#0E8784";
+         listOne.style.fontWeight = "bolder";
+     }
+ })
 
-arrowOne.addEventListener("click", () => {
-    if(!preference.classList.contains("view-state")) {
-        preference.classList.add("view-state");
-        arrowOne.style.transform = "rotate(360deg)";
+ listTwo.addEventListener("click", () => {
+     if(type.classList.contains("view-state")) {
+         type.classList.remove("view-state");
+         arrowtwo.style.transform = "rotate(180deg)";
+         listTwo.style.color = "#333D4B";
+         listTwo.style.fontWeight = "bolder";
+         aTwoSpan.style.color = "#0E8784";
+     } else {
+         type.classList.add("view-state");
+         arrowtwo.style.transform = "rotate(360deg)";
+         listTwo.style.color = "#83888F";
+         aTwoSpan.style.color = "#83888F";
+         listTwo.style.fontWeight = "normal";
+     }
+ })
+ listThree.addEventListener("click", () => {
+     if(quant.classList.contains("view-state")) {
+         quant.classList.remove("view-state");
+         arrowthree.style.transform = "rotate(180deg)";
+         listThree.style.color = "#333D4B";
+         listThree.style.fontWeight = "bolder";
+         aThreeSpan.style.color = "#0E8784";
     } else {
-        preference.classList.remove("view-state");
-        arrowOne.style.transform = "rotate(180deg)";
-    }
-})
+         quant.classList.add("view-state");
+         arrowthree.style.transform = "rotate(360deg)";
+         listThree.style.color = "#83888F";
+         aThreeSpan.style.color = "#83888F";
+         listThree.style.fontWeight = "normal";
+     }
+ })
+ listFour.addEventListener("click", () => {
+     if(grind.classList.contains("view-state")) {
+         grind.classList.remove("view-state");
+         arrowfour.style.transform = "rotate(180deg)";
+         listFour.style.color = "#333D4B";
+         listFour.style.fontWeight = "bolder";
+         aFourSpan.style.color = "#0E8784";
+     } else {
+         grind.classList.add("view-state");
+         arrowfour.style.transform = "rotate(360deg)";
+         listFour.style.color = "#83888F";
+         aFourSpan.style.color = "#83888F";
+         listFour.style.fontWeight = "normal";
+     }
+ })
+ listFive.addEventListener("click", () => {
+     if(delivery.classList.contains("view-state")) {
+         delivery.classList.remove("view-state");
+         arrowfive.style.transform = "rotate(180deg)";
+         listFive.style.color = "#333D4B";
+         listFive.style.fontWeight = "bolder";
+         aFiveSpan.style.color = "#0E8784";
+     } else {
+         delivery.classList.add("view-state");
+         arrowfive.style.transform = "rotate(360deg)";
+         listFive.style.color = "#83888F";
+         aFiveSpan.style.color = "#83888F";
+         listFive.style.fontWeight = "normal";
+     }
+ })
 
-arrowtwo.addEventListener("click", () => {
-    if(type.classList.contains("view-state")) {
-        type.classList.remove("view-state");
-        arrowtwo.style.transform = "rotate(180deg)";
+ arrowOne.addEventListener("click", () => {
+     if(!preference.classList.contains("view-state")) {
+         preference.classList.add("view-state");
+         arrowOne.style.transform = "rotate(360deg)";
+     } else {
+         preference.classList.remove("view-state");
+         arrowOne.style.transform = "rotate(180deg)";
+     }
+})
+ arrowtwo.addEventListener("click", () => {
+     if(type.classList.contains("view-state")) {
+         type.classList.remove("view-state");
+         arrowtwo.style.transform = "rotate(180deg)";
     } else {
-        type.classList.add("view-state");
-        arrowtwo.style.transform = "rotate(360deg)";
-    }
+         type.classList.add("view-state");
+         arrowtwo.style.transform = "rotate(360deg)";
+     }
 })
-arrowthree.addEventListener("click", () => {
-    if(quantity.classList.contains("view-state")) {
-        quantity.classList.remove("view-state");
-        arrowthree.style.transform = "rotate(180deg)";
-    } else {
-        quantity.classList.add("view-state");
-        arrowthree.style.transform = "rotate(360deg)";
-
-    }
+ arrowthree.addEventListener("click", () => {
+     if(quant.classList.contains("view-state")) {
+         quant.classList.remove("view-state");
+         arrowthree.style.transform = "rotate(180deg)";
+     } else {
+         quant.classList.add("view-state");
+         arrowthree.style.transform = "rotate(360deg)";
+     }
 })
-
 arrowfour.addEventListener("click", () => {
     if(grind.classList.contains("view-state")) {
         grind.classList.remove("view-state");
         arrowfour.style.transform = "rotate(180deg)";
-    } else {
+     } else {
         grind.classList.add("view-state");
         arrowfour.style.transform = "rotate(360deg)";
-    }
-})
+     }
+ })
 
 arrowfive.addEventListener("click", () => {
-    if(delivery.classList.contains("view-state")) {
-        delivery.classList.remove("view-state");
-        arrowfive.style.transform = "rotate(180deg)";
-    } else {
-        delivery.classList.add("view-state");
-        arrowfive.style.transform = "rotate(360deg)";
-    }
-})
+     if(delivery.classList.contains("view-state")) {
+         delivery.classList.remove("view-state");
+         arrowfive.style.transform = "rotate(180deg)";
+     } else {
+         delivery.classList.add("view-state");
+         arrowfive.style.transform = "rotate(360deg)";
+     }
+ })
 
-boxes.forEach(box => {
-    box.addEventListener('click', () => {
-        box.style.backgroundColor = '#0E8784';
-    })
-    if(box === capsule.classList.contains("cap")) {
-        arrowfour.addEventListener("click", () => {
-        grind.classList.add("view-state");
-        grindHeading.style.color = "#83888F";
-        })
+
+for (let i = 0; i < preferences.length; i++) {
+  preferences[i].addEventListener("click", () => {
+    for (let j = 0; j < preferences.length; j++) {
+      preferences[j].classList.remove("order-card-selected");
+      preferences[j].style.backgroundColor = "#F4F1EB";
+      filterOrEspresso.style.display = "none";
+      grindHeading.style.fontWeight = "450";
     }
-});
+    preferences[i].classList.add("order-card-selected");
+    preferences[i].style.backgroundColor = "#0E8784";
+    if (preferences[i] === capsule) {
+      grindToggler.style.pointerEvents = "none";
+      grindOptions.classList.add("collapsed");
+      usingOrAs.innerText = "using";
+      preferencesText.innerText = "Capsule";
+      grindOptionsText.style.display = "none";
+    } else if (i === 1) {
+      usingOrAs.innerText = "as";
+      preferencesText.innerText = "Filter";
+      filterOrEspresso.style.display = "inline";
+      grindHeading.style.fontWeight = "600";
+
+    } else if (i === 2) {
+      usingOrAs.innerText = "as";
+      preferencesText.innerText = "Espresso";
+      filterOrEspresso.style.display = "inline";
+      grindHeading.style.fontWeight = "600";
+
+    }
+    if (preferences[i] !== capsule) {
+      grindToggler.style.pointerEvents = "all";
+      grindOptionsText.style.display = "inline";
+    }
+
+    preferencesClicked = true;
+    r = isElementClicked(preferencesClicked);
+  });
+}
+
+for (let i = 0; i < beanTypes.length; i++) {
+  beanTypes[i].addEventListener("click", () => {
+    for (let j = 0; j < beanTypes.length; j++) {
+      beanTypes[j].classList.remove("order-card-selected");
+      beanTypes[j].style.backgroundColor = "#F4F1EB";
+    }
+    beanTypes[i].classList.add("order-card-selected");
+    beanTypes[i].style.backgroundColor = "#0E8784";
+    typeText.innerText = i === 0 ? "Single Origin" : i === 1 ? "Decaf" : "Blended";
+    beanTypesClicked = true;
+  });
+}
+
+for (let i = 0; i < quantity.length; i++) {
+  quantity[i].addEventListener("click", () => {
+    for (let j = 0; j < quantity.length; j++) {
+      quantity[j].classList.remove("order-card-selected");
+      quantity[j].style.backgroundColor = "#F4F1EB";
+
+    }
+    quantity[i].classList.add("order-card-selected");
+    quantity[i].style.backgroundColor = "#0E8784";
+    quantityText.innerText = i === 0 ? "250g" : i === 1 ? "500g" : "1000g";
+    orderquantitiesClicked = true;
+  });
+}
+
+for (let i = 0; i < grindOption.length; i++) {
+  grindOption[i].addEventListener("click", () => {
+    for (let j = 0; j < grindOption.length; j++) {
+      grindOption[j].classList.remove("order-card-selected");
+      grindOption[j].style.backgroundColor = "#F4F1EB";
+
+    }
+    grindOption[i].classList.add("order-card-selected");
+    grindOption[i].style.backgroundColor = "#0E8784";
+    grindOptionsText.innerText = i === 0 ? " Wholebean" : i === 1 ? " Filter" : " Cafetiére";
+  });
+}
+
+for (let i = 0; i < deliveries.length; i++) {
+  deliveries[i].addEventListener("click", () => {
+    for (let j = 0; j < deliveries.length; j++) {
+      deliveries[j].classList.remove("order-card-selected");
+      deliveries[j].style.backgroundColor = "#F4F1EB";
+
+    }
+    deliveries[i].classList.add("order-card-selected");
+    deliveries[i].style.backgroundColor = "#0E8784";
+    deliveriesText.innerText = i === 0 ? "Every week" : i === 1 ? "Every 2 weeks" : "Every month";
+    deliveriesClicked = true;
+  });
+}
+
+// Added by Koffi
+function isElementClicked(){
+  console.log(preferencesClicked ? "clicked" : "not");
+  console.log(beanTypesClicked ? "clicked" : "not");
+  console.log(orderquantitiesClicked ? "clicked" : "not");
+  console.log(deliveriesClicked ? "clicked" : "not");
+   if(preferencesClicked === true && beanTypesClicked === true && orderquantitiesClicked === true && deliveriesClicked === true){
+    document.getElementById("show").classList.add("create_plan_active");
+  }
+}
+setInterval(isElementClicked, 2000);
+
+
+document.getElementById("show").addEventListener('click', function(){
+  if(quantityText.innerHTML === "250g"){
+    if(deliveriesText.innerHTML === "Every week"){
+      pricePerMouthNumber = 7.20 * 4;
+    }else if(deliveriesText.innerHTML === "Every 2 weeks"){
+      pricePerMouthNumber = 9.60 * 2;
+    }else if(deliveriesText.innerHTML === "Every month"){
+      pricePerMouthNumber = 12.00;
+    }
+  }else if(quantityText.innerHTML === "500g"){
+    if(deliveriesText.innerHTML === "Every week"){
+      pricePerMouthNumber = 13.00 * 4;
+    }else if(deliveriesText.innerHTML === "Every 2 weeks"){
+      pricePerMouthNumber = 17.50 * 2;
+    }else if(deliveriesText.innerHTML === "Every month"){
+      pricePerMouthNumber = 22.00;
+    }
+  }else if(quantityText.innerHTML === "1000g"){
+    if(deliveriesText.innerHTML === "Every week"){
+      pricePerMouthNumber = 22.00 * 4;
+    }else if(deliveriesText.innerHTML === "Every 2 weeks"){
+      pricePerMouthNumber = 32.00 * 2;
+    }else if(deliveriesText.innerHTML === "Every month"){
+      pricePerMouthNumber = 42.00;
+    }
+  }
+  console.log(pricePerMouthNumber.toString());
+
+  document.getElementById("price-per-month").innerHTML = pricePerMouthNumber.toString();
+});          
