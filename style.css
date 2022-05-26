@@ -451,6 +451,7 @@ ul.active a {
 
 .create-plan p {
     color: #83888F;
+    margin-top: 1rem;
 }
 
 .steps {
@@ -491,20 +492,10 @@ ul.active a {
   }
 .order-card-selected p {
     color: #fff;
-    /* background-color: #0E8784; */
   }
-  .toggler-rotated {
-    transform: rotate(180deg);
-  }
-  .collapsed {
-    max-height: 0;
-    margin-bottom: 0;
-  }
-  .create_plan_active{
+
+.create_plan_active{
     pointer-events: visible;
-    /* background-color: #0E8784;
-    color: #fff;
-    border-radius: 5px; */
   }
   /* end */
 .questions {
@@ -578,7 +569,6 @@ ul.active a {
 }
 
 .details h3  {
-    /* color: #83888F; */
     margin-left: 1rem;
     width: 100%;
 }
@@ -632,8 +622,7 @@ ul.active a {
     visibility: visible;
     opacity: 1;
   }
-  
-  
+
   .modal-box{
     position: absolute;
     background-size: cover;
@@ -993,22 +982,24 @@ ul.active a {
        text-align: center;
     }
     .your-plan {
-        width: 70%;
+        width: 80%;
         margin: 4rem auto;
     }
     .your-plan h1 {
-        font-size: 39px;
+        font-size: 40px;
         line-height: 1;
     }
     .your-plan p {
-        font-size: 15px;
+        font-size: 18px;
     }
-    .overlay h1 {
+    #top-button{
+        padding: 1.3rem;
+        margin-left: 0.4rem;
+
+    }
+    .collection h1 {
         font-size: 60px;
-        margin-bottom: 2em;
-    }
-    .overlay {
-        margin-top: -4rem;
+        margin-bottom: 2rem;
     }
     .coffee-type {
         width: 100%;
@@ -1064,6 +1055,7 @@ ul.active a {
         padding-block: 1.4rem;
         padding-inline: 3rem;
         font-size: 25px;
+        margin-left: 0.4rem;
     }
     #footer {
         padding-block: 4rem;
