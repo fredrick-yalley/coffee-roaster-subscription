@@ -719,6 +719,11 @@ ul.active a {
 .preference #filter-or-espresso {
     color: #83888F;
 }
+#message {
+    margin-top: -7rem;
+    margin-bottom: 8rem;
+    color: #66D2CF;
+}
 
 .button {
     display: flex;
@@ -728,7 +733,7 @@ ul.active a {
 
 
 .subscribe-button {
-    background-color: #0E8784;
+    background-color: #F4F1EB;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -737,7 +742,7 @@ ul.active a {
 }
 .subscribe-button:hover {
     cursor: pointer;
-    background-color: #66D2CF;
+    /* background-color: #66D2CF; */
 }
 
 @media (max-width: 820px) {
