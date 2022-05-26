@@ -21,7 +21,7 @@ const usingOrAs = document.getElementById("using-or-as"),
 
   const filterOrEspresso = document.getElementById("filter-or-espresso");
   const grindHeading = document.getElementById("grind-heading");
-
+  const planParagraph = document.getElementById("create-plan-paragraph");
 
 let preferencesClicked = false;
 let beanTypesClicked = false;
@@ -38,16 +38,25 @@ const listOne = document.querySelector("#p-arrow-1");
     const listFive = document.querySelector("#p-arrow-5");
 
     const arrowOne = document.querySelector("#arrow-1");
-    const arrowtwo = document.querySelector("#arrow-2");
-    const arrowfour = document.querySelector(".arrow-4");
-    const arrowthree = document.querySelector("#arrow-3");
-    const arrowfive = document.querySelector("#arrow-5");
+    const arrowTwo = document.querySelector("#arrow-2");
+    const arrowFour = document.querySelector(".arrow-4");
+    const arrowThree = document.querySelector("#arrow-3");
+    const arrowFive = document.querySelector("#arrow-5");
+
+    const aOneSpan = document.getElementById("a1-span");
+    const aTwoSpan = document.getElementById("a2-span");
+    const aThreeSpan = document.getElementById("a3-span");
+    const aFourSpan = document.getElementById("a4-span");
+    const aFiveSpan = document.getElementById("a5-span");
+
 
    const preference = document.querySelector("#pref-option");
     const type = document.querySelector("#type-option");
     const quant = document.querySelector("#quantity-option");
     const grind = document.querySelector("#grind-option");
     const delivery = document.querySelector("#delivery-option");
+
+
 
 menu.addEventListener("click", () => {
     if(menu.classList.contains("fa-bars")) {
@@ -81,58 +90,61 @@ listOne.addEventListener("click", () => {
  listTwo.addEventListener("click", () => {
      if(type.classList.contains("view-state")) {
          type.classList.remove("view-state");
-         arrowtwo.style.transform = "rotate(180deg)";
+         arrowTwo.style.transform = "rotate(180deg)";
          listTwo.style.color = "#333D4B";
          listTwo.style.fontWeight = "bolder";
          aTwoSpan.style.color = "#0E8784";
      } else {
          type.classList.add("view-state");
-         arrowtwo.style.transform = "rotate(360deg)";
+         arrowTwo.style.transform = "rotate(360deg)";
          listTwo.style.color = "#83888F";
          aTwoSpan.style.color = "#83888F";
          listTwo.style.fontWeight = "normal";
      }
  })
+
  listThree.addEventListener("click", () => {
      if(quant.classList.contains("view-state")) {
          quant.classList.remove("view-state");
-         arrowthree.style.transform = "rotate(180deg)";
+         arrowThree.style.transform = "rotate(180deg)";
          listThree.style.color = "#333D4B";
          listThree.style.fontWeight = "bolder";
          aThreeSpan.style.color = "#0E8784";
     } else {
          quant.classList.add("view-state");
-         arrowthree.style.transform = "rotate(360deg)";
+         arrowThree.style.transform = "rotate(360deg)";
          listThree.style.color = "#83888F";
          aThreeSpan.style.color = "#83888F";
          listThree.style.fontWeight = "normal";
      }
  })
+
  listFour.addEventListener("click", () => {
      if(grind.classList.contains("view-state")) {
          grind.classList.remove("view-state");
-         arrowfour.style.transform = "rotate(180deg)";
+         arrowFour.style.transform = "rotate(180deg)";
          listFour.style.color = "#333D4B";
          listFour.style.fontWeight = "bolder";
          aFourSpan.style.color = "#0E8784";
      } else {
          grind.classList.add("view-state");
-         arrowfour.style.transform = "rotate(360deg)";
+         arrowFour.style.transform = "rotate(360deg)";
          listFour.style.color = "#83888F";
          aFourSpan.style.color = "#83888F";
          listFour.style.fontWeight = "normal";
      }
  })
+
  listFive.addEventListener("click", () => {
      if(delivery.classList.contains("view-state")) {
          delivery.classList.remove("view-state");
-         arrowfive.style.transform = "rotate(180deg)";
+         arrowFive.style.transform = "rotate(180deg)";
          listFive.style.color = "#333D4B";
          listFive.style.fontWeight = "bolder";
          aFiveSpan.style.color = "#0E8784";
      } else {
          delivery.classList.add("view-state");
-         arrowfive.style.transform = "rotate(360deg)";
+         arrowFive.style.transform = "rotate(360deg)";
          listFive.style.color = "#83888F";
          aFiveSpan.style.color = "#83888F";
          listFive.style.fontWeight = "normal";
@@ -148,41 +160,41 @@ listOne.addEventListener("click", () => {
          arrowOne.style.transform = "rotate(180deg)";
      }
 })
- arrowtwo.addEventListener("click", () => {
+ arrowTwo.addEventListener("click", () => {
      if(type.classList.contains("view-state")) {
          type.classList.remove("view-state");
-         arrowtwo.style.transform = "rotate(180deg)";
+         arrowTwo.style.transform = "rotate(180deg)";
     } else {
          type.classList.add("view-state");
-         arrowtwo.style.transform = "rotate(360deg)";
+         arrowTwo.style.transform = "rotate(360deg)";
      }
 })
- arrowthree.addEventListener("click", () => {
+ arrowThree.addEventListener("click", () => {
      if(quant.classList.contains("view-state")) {
          quant.classList.remove("view-state");
-         arrowthree.style.transform = "rotate(180deg)";
+         arrowThree.style.transform = "rotate(180deg)";
      } else {
          quant.classList.add("view-state");
-         arrowthree.style.transform = "rotate(360deg)";
+         arrowThree.style.transform = "rotate(360deg)";
      }
 })
-arrowfour.addEventListener("click", () => {
+arrowFour.addEventListener("click", () => {
     if(grind.classList.contains("view-state")) {
         grind.classList.remove("view-state");
-        arrowfour.style.transform = "rotate(180deg)";
+        arrowFour.style.transform = "rotate(180deg)";
      } else {
         grind.classList.add("view-state");
-        arrowfour.style.transform = "rotate(360deg)";
+        arrowFour.style.transform = "rotate(360deg)";
      }
  })
 
-arrowfive.addEventListener("click", () => {
+arrowFive.addEventListener("click", () => {
      if(delivery.classList.contains("view-state")) {
          delivery.classList.remove("view-state");
-         arrowfive.style.transform = "rotate(180deg)";
+         arrowFive.style.transform = "rotate(180deg)";
      } else {
          delivery.classList.add("view-state");
-         arrowfive.style.transform = "rotate(360deg)";
+         arrowFive.style.transform = "rotate(360deg)";
      }
  })
 
@@ -203,17 +215,20 @@ for (let i = 0; i < preferences.length; i++) {
       usingOrAs.innerText = "using";
       preferencesText.innerText = "Capsule";
       grindOptionsText.style.display = "none";
+      planParagraph.innerText = "built";
     } else if (i === 1) {
       usingOrAs.innerText = "as";
       preferencesText.innerText = "Filter";
       filterOrEspresso.style.display = "inline";
       grindHeading.style.fontWeight = "600";
+      planParagraph.innerText = "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.";
 
     } else if (i === 2) {
       usingOrAs.innerText = "as";
       preferencesText.innerText = "Espresso";
       filterOrEspresso.style.display = "inline";
       grindHeading.style.fontWeight = "600";
+      planParagraph.innerText = "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.";
 
     }
     if (preferences[i] !== capsule) {
@@ -280,12 +295,7 @@ for (let i = 0; i < deliveries.length; i++) {
   });
 }
 
-// Added by Koffi
 function isElementClicked(){
-  console.log(preferencesClicked ? "clicked" : "not");
-  console.log(beanTypesClicked ? "clicked" : "not");
-  console.log(orderquantitiesClicked ? "clicked" : "not");
-  console.log(deliveriesClicked ? "clicked" : "not");
    if(preferencesClicked === true && beanTypesClicked === true && orderquantitiesClicked === true && deliveriesClicked === true){
     document.getElementById("show").classList.add("create_plan_active");
   }
@@ -319,7 +329,6 @@ document.getElementById("show").addEventListener('click', function(){
       pricePerMouthNumber = 42.00;
     }
   }
-  console.log(pricePerMouthNumber.toString());
 
   document.getElementById("price-per-month").innerHTML = pricePerMouthNumber.toString();
 });          
