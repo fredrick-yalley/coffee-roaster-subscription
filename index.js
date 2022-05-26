@@ -21,11 +21,15 @@ const usingOrAs = document.getElementById("using-or-as"),
 
   const filterOrEspresso = document.getElementById("filter-or-espresso");
   const grindHeading = document.getElementById("grind-heading");
-  const planParagraph = document.getElementById("create-plan-paragraph");
+  const message = document.querySelector("#message");
+  const createParagraph = document.getElementById("create-paragraph");
+const sec = "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.";
+
 
 let preferencesClicked = false;
 let beanTypesClicked = false;
 let orderquantitiesClicked = false;
+let grindClicked = false;
 let deliveriesClicked = false;
 
 let pricePerMouthNumber = 0;
@@ -211,30 +215,27 @@ for (let i = 0; i < preferences.length; i++) {
     preferences[i].style.backgroundColor = "#0E8784";
     if (preferences[i] === capsule) {
       grindToggler.style.pointerEvents = "none";
-      grindOptions.classList.add("collapsed");
       usingOrAs.innerText = "using";
       preferencesText.innerText = "Capsule";
       grindOptionsText.style.display = "none";
-      planParagraph.innerText = "built";
     } else if (i === 1) {
       usingOrAs.innerText = "as";
       preferencesText.innerText = "Filter";
       filterOrEspresso.style.display = "inline";
       grindHeading.style.fontWeight = "600";
-      planParagraph.innerText = "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.";
+      createParagraph.innerHTML = sec;
 
     } else if (i === 2) {
       usingOrAs.innerText = "as";
       preferencesText.innerText = "Espresso";
       filterOrEspresso.style.display = "inline";
       grindHeading.style.fontWeight = "600";
-      planParagraph.innerText = "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.";
-
+      createParagraph.innerHTML = sec;
     }
-    if (preferences[i] !== capsule) {
-      grindToggler.style.pointerEvents = "all";
-      grindOptionsText.style.display = "inline";
-    }
+    // if (preferences[i] !== capsule) {
+    //   grindToggler.style.pointerEvents = "all";
+    //   grindOptionsText.style.display = "inline";
+    // }
 
     preferencesClicked = true;
     r = isElementClicked(preferencesClicked);
@@ -278,6 +279,8 @@ for (let i = 0; i < grindOption.length; i++) {
     grindOption[i].classList.add("order-card-selected");
     grindOption[i].style.backgroundColor = "#0E8784";
     grindOptionsText.innerText = i === 0 ? " Wholebean" : i === 1 ? " Filter" : " Cafetiére";
+    grindClicked = true;
+
   });
 }
 
@@ -297,7 +300,17 @@ for (let i = 0; i < deliveries.length; i++) {
 
 function isElementClicked(){
    if(preferencesClicked === true && beanTypesClicked === true && orderquantitiesClicked === true && deliveriesClicked === true){
-    document.getElementById("show").classList.add("create_plan_active");
+    document.getElementById("show").style.display = "block";
+    document.getElementById("show").style.backgroundColor = "#0E8784";
+    message.innerText = "Done!";
+    
+  }else if (preferencesClicked === true && beanTypesClicked === true && orderquantitiesClicked === true && grindClicked === true && deliveriesClicked === true) {
+    document.getElementById("show").style.display = "block";
+    document.getElementById("show").style.backgroundColor = "#0E8784";
+    message.innerText = "Done";
+  }else {
+    document.getElementById("show").style.display = "none";
+    message.innerText = "finish selecting the options";
   }
 }
 setInterval(isElementClicked, 2000);
