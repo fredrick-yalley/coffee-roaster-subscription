@@ -3,11 +3,11 @@ Coffee Roaster Subscription
 A group project by Amalitech.org.
 
 
-DESCRIPTION -A simple three page website for the user to create their coffeeroater coffee plan by subscribing on their site. User have the opportunity to create their coffee plan with the coffeeroaster business. HTML, CSS and vanilla javascript. -The website has been designed to be compatible with desktop screen-size, tablet and mobile screen. -It can simply be run by visiting https://fredrick-yalley.github.io/coffee-roaster-subscription/
+- DESCRIPTION -A simple three page website for the user to create their coffeeroater coffee plan by subscribing on their site. User have the opportunity to create their coffee plan with the coffeeroaster business. HTML, CSS and vanilla javascript. -The website has been designed to be compatible with desktop screen-size, tablet and mobile screen. -It can simply be run by visiting https://fredrick-yalley.github.io/coffee-roaster-subscription/
 
-This is an interactive coffee subscription page that has a number of specific functionalities and they are:
+- This is an interactive coffee subscription page that has a number of specific functionalities and they are:
 
-Functionalities
+- Functionalities
 If "Capsule" is selected as a preference,
 The "Want us to grind them?" section should be disabled, that means capsule preference option can not be grinded.
 Order summary texts updates
@@ -34,7 +34,7 @@ If Every Week is selected, the Order Summary modal should show the per shipment 
 If Every 2 Weeks is selected, the Order Summary modal should show the per shipment price multiplied by 2. For example, if 250g weight is selected, the price would be $19.20/month
 If Every Month is selected, the Order Summary modal should show the per shipment price multiplied by 1. For example, if 250g weight is selected, the price would be $12.00/month
 
-Built with
+- Built with
 
 Semantic HTML5 markup
 CSS custom properties
@@ -42,5 +42,5 @@ Flexbox
 CSS Grid
 Vanilla JavaScript 
 
-Author
+- Author
 Fredrick Yalley (https://github.com/fredrick-yalley) @fredrick-yalley
