@@ -43,4 +43,4 @@ Calculating per month cost for the Order Summary modal
 - Vanilla JavaScript 
 
  **Author**
-- Fredrick Yalley (https://github.com/fredrick-yalley- @fredrick-yalley
+- Fredrick Yalley (https://github.com/fredrick-yalley- @fredrick-yalley)
