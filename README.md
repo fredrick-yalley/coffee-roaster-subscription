@@ -11,9 +11,9 @@ A group project by Amalitech.org.
 * If "Capsule" is selected as a preference,
 The "Want us to grind them?" section should be disabled, that means capsule preference option can not be grinded.
 Order summary texts updates
-* If "Capsule" is selected, update the order summary text to:
+** If "Capsule" is selected, update the order summary text to:
 "I drink my coffee using Capsules", the text (using) is used and the grind selection text is removed from summary.
-* If "Filter" or "Espresso" are selected, update the order summary text to:
+** If "Filter" or "Espresso" are selected, update the order summary text to:
 "I drink my coffee as Filter||Espresso", the text (as) is used  and the grind selection text is showned on the summary.
 * For all other selections, the selection title is added in the blank space where appropriate
 * Updating per shipment price (shown in "How often should we deliver?" section at the bottom) based on weight selected
