@@ -25,7 +25,7 @@
     <div class="part-1">
         <div class="create-plan">
             <h1>Create plan.</h1>
-            <p>Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality</p>
+            <p id="create-paragraph">Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality</p>
         </div>
     </div>
 
@@ -71,7 +71,7 @@
         <div class="details">
             <div id="preference" class="questions">
                 <h3>How do you drink your coffee?
-                    <img class="toggler" id="arrow-1" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-1" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="pref-option" class="options option-def">
                     <div id="capsule" class="select preferences">
@@ -90,7 +90,7 @@
             </div>
             <div id="Beans-type" class="questions">
                 <h3>What type of coffee?
-                    <img class="toggler" id="arrow-2" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-2" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="type-option" class="options view-state">
                     <div id="origin" class="select bean-types">
@@ -128,7 +128,7 @@
             </div>
             <div id="grind" class="questions">
                 <h3 id="grind-heading">Want us to grind them?
-                    <img class="toggler arrow-4" id="grind-toggler" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img class="arrow-4" id="grind-toggler" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="grind-option" class="options view-state">
                     <div id="wholebean" class="select grind-option">
@@ -147,7 +147,7 @@
             </div>
             <div id="delivery" class="questions">
                 <h3>How often should we deliver?
-                    <img class="toggler" id="arrow-5" src="./assets/plan/desktop/icon-arrow.svg" alt="">
+                    <img id="arrow-5" src="./assets/plan/desktop/icon-arrow.svg" alt="">
                 </h3>
                 <div id="delivery-option" class="options view-state order-cards">
                     <div id="one-week" class="select deliveries">
@@ -172,7 +172,7 @@
             <div class="button">
                 <a href="#modal-bg" id="show" class="subscribe-button">Create my plan!</a>
             </div>
-            
+            <h3 id="message"></h3>
         </div>
     </div>
 
@@ -184,7 +184,7 @@
                    <div class="preference"></div>
                     <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout</p>              
                     <div class="modal_price_and_button">
-                        <h2>$<span id="price-per-month">0</span>.00/mon</h2>    
+                        <h2>$<span id="price-per-month"></span>/mon</h2>    
                         <a href="./subscribe.html" class="checkout"><span class="checkout_text">Checkout</span></a>
                     </div>
         </div>
@@ -193,25 +193,21 @@
     <script type="text/javascript">
 
         const button = document.querySelector('#show');
-        var dialog = document.getElementById('modal-bg');
+        const dialog = document.getElementById('modal-bg');
         
       
         button.addEventListener('click', ()=> {
-          console.log('clicked')
       
             const selected = document.querySelector('#selected-pref').innerHTML;
       
-            console.log(selected)
             document.querySelector('.preference').innerHTML = `"${selected}"`;
             dialog.classList.add("bg-active");
         })
+
         dialog.addEventListener("click", ()=>{
               dialog.classList.remove("bg-active");
-            })
-        document.getElementById('hide').onclick = function() { 
-              dialog.classList.add("bg-hide"); 
-            };     
-        </script>
+            })   
+    </script>
 
     <footer id="footer">
         <div id="logo">
