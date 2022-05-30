@@ -1,7 +1,6 @@
 const menu = document.querySelector(".fa");
 const nav = document.querySelector("ul");
-const toggler = document.getElementsByClassName("toggler"),
-  orderCards = document.getElementsByClassName("order-cards"),
+const orderCards = document.getElementsByClassName("order-cards"),
   preferences = document.getElementsByClassName("preferences"),
   beanTypes = document.getElementsByClassName("bean-types"),
   quantity = document.getElementsByClassName("quantity"),
@@ -23,7 +22,7 @@ const usingOrAs = document.getElementById("using-or-as"),
   const grindHeading = document.getElementById("grind-heading");
   const message = document.querySelector("#message");
   const createParagraph = document.getElementById("create-paragraph");
-const sec = "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.";
+  const sec = "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.";
 
 
 let preferencesClicked = false;
@@ -35,7 +34,7 @@ let deliveriesClicked = false;
 let pricePerMouthNumber = 0;
 
 
-const listOne = document.querySelector("#p-arrow-1");
+    const listOne = document.querySelector("#p-arrow-1");
     const listTwo = document.querySelector("#p-arrow-2");
     const listThree = document.querySelector("#p-arrow-3");
     const listFour = document.querySelector("#p-arrow-4");
@@ -238,7 +237,7 @@ for (let i = 0; i < preferences.length; i++) {
     // }
 
     preferencesClicked = true;
-    r = isElementClicked(preferencesClicked);
+    r = optionClicked(preferencesClicked);
   });
 }
 
@@ -298,22 +297,22 @@ for (let i = 0; i < deliveries.length; i++) {
   });
 }
 
-function isElementClicked(){
+function optionClicked(){
    if(preferencesClicked === true && beanTypesClicked === true && orderquantitiesClicked === true && deliveriesClicked === true){
-    document.getElementById("show").style.display = "block";
+    document.getElementById("show").classList.remove("Disabled");
     document.getElementById("show").style.backgroundColor = "#0E8784";
     message.innerText = "Done!";
     
   }else if (preferencesClicked === true && beanTypesClicked === true && orderquantitiesClicked === true && grindClicked === true && deliveriesClicked === true) {
-    document.getElementById("show").style.display = "block";
+    document.getElementById("show").classList.remove("Disabled");
     document.getElementById("show").style.backgroundColor = "#0E8784";
-    message.innerText = "Done";
+    message.innerText = "Done!";
   }else {
-    document.getElementById("show").style.display = "none";
-    message.innerText = "finish selecting the options";
+    document.getElementById("show").classList.add("Disabled");
+    message.innerText = "Please complete your order!";
   }
 }
-setInterval(isElementClicked, 2000);
+setInterval(optionClicked, 2000);
 
 
 document.getElementById("show").addEventListener('click', function(){
