@@ -217,12 +217,14 @@ for (let i = 0; i < preferences.length; i++) {
       usingOrAs.innerText = "using";
       preferencesText.innerText = "Capsule";
       grindOptionsText.style.display = "none";
+      listFour.classList.add("Disabled");
     } else if (i === 1) {
       usingOrAs.innerText = "as";
       preferencesText.innerText = "Filter";
       filterOrEspresso.style.display = "inline";
       grindHeading.style.fontWeight = "600";
       createParagraph.innerHTML = sec;
+      listFour.classList.remove("Disabled");
 
     } else if (i === 2) {
       usingOrAs.innerText = "as";
@@ -230,6 +232,7 @@ for (let i = 0; i < preferences.length; i++) {
       filterOrEspresso.style.display = "inline";
       grindHeading.style.fontWeight = "600";
       createParagraph.innerHTML = sec;
+      listFour.classList.remove("Disabled");
     }
     // if (preferences[i] !== capsule) {
     //   grindToggler.style.pointerEvents = "all";
